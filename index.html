@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Garage by Kamini GK</title>
+  <meta name="description" content="Digital Garage by Kamini GK — SEO-led websites, digital marketing, Canva design, AI content, and WhatsApp Business systems." />
+
+  <style>
+    :root{
+      --bg1:#070a13;
+      --bg2:#0b1220;
+      --text:#eef2ff;
+      --muted:#b7c0dd;
+      --accent:#ffd27a;
+      --accent2:#7ad7ff;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(122,215,255,.18), transparent 60%),
+        radial-gradient(1000px 600px at 85% 0%, rgba(255,210,122,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:26px}
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(7,10,19,.78), rgba(7,10,19,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:1120px;margin:0 auto;padding:14px 26px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; flex-direction:column; gap:2px;font-weight:800;letter-spacing:.2px}
+    .brand small{font-weight:600;color:var(--muted);letter-spacing:.15px}
+    .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:700;
+      transition: transform .12s ease, background .12s ease;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08)}
+    .btn.primary{background: linear-gradient(90deg, var(--accent), #ffe9b3);border:0;color:#1a1406}
+    .btn.secondary{background: linear-gradient(90deg, var(--accent2), #c8f0ff);border:0;color:#031019}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .hero{
+      padding:34px 0 10px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .hero h1{margin:0;font-size:44px;line-height:1.05;letter-spacing:.1px}
+    .sub{margin:14px 0 18px;color:var(--muted);font-size:18px;line-height:1.55}
+    .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .kpis{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .kpi{
+      padding:10px 12px; border-radius:16px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted); font-size:13px;
+    }
+    .section{padding:26px 0}
+    .section h2{margin:0 0 8px; font-size:26px}
+    .section p{margin:0; color:var(--muted); line-height:1.6}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; margin-top:14px}
+    .mini h3{margin:0 0 8px; font-size:18px}
+    .mini p{margin:0; color:var(--muted); line-height:1.55}
+    .list{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .list li{padding:12px 12px;border-radius:16px;background: rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);color:var(--muted)}
+    .contactCard{display:grid; grid-template-columns: 1fr 1fr 1fr; gap:14px; margin-top:14px}
+    .contactItem{background: rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius: 18px;padding:14px}
+    .contactItem .label{color:var(--muted); font-size:12px; letter-spacing:.2px}
+    .contactItem .value{margin-top:6px; font-weight:800}
+    .footer{margin-top:22px;padding:22px 0;border-top:1px solid rgba(255,255,255,.10);color:var(--muted);font-size:13px}
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .contactCard{grid-template-columns:1fr}
+      .hero h1{font-size:36px}
+      .links{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="nav">
+      <div class="brand">
+        Digital Garage by Kamini GK
+        <small>Websites • SEO • Digital Marketing • Design Systems</small>
+      </div>
+      <div class="links">
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#portfolio">Portfolio</a>
+        <a class="btn" href="#meenakshi">Meenakshi Films Combine</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="hero" id="top">
+      <div class="card">
+        <h1>SEO-led websites and digital systems built with clarity and premium execution.</h1>
+        <p class="sub">
+          Digital Garage by Kamini GK delivers structured strategy, website wireframe planning, clean design, and consistent content systems.
+          Every build supports visibility, trust, and business growth.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/917045649547" target="_blank" rel="noreferrer">WhatsApp to Start</a>
+          <a class="btn secondary" href="#services">View Services</a>
+          <a class="btn" href="mailto:kamini.birdsongllp@gmail.com">Email</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi">Wireframe-first planning</div>
+          <div class="kpi">Mobile-first layouts</div>
+          <div class="kpi">SEO structure from day one</div>
+          <div class="kpi">Brand-consistent templates</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px;font-size:22px;">Fast Start Package</h2>
+        <p class="sub" style="margin:0 0 14px;font-size:15px;">A complete launch-ready foundation for business visibility.</p>
+        <ul class="list">
+          <li><strong style="color:var(--text)">Website wireframe</strong> + page structure</li>
+          <li><strong style="color:var(--text)">WordPress / Elementor</strong> build</li>
+          <li><strong style="color:var(--text)">On-page SEO</strong> basics for every page</li>
+          <li><strong style="color:var(--text)">WhatsApp integration</strong> + contact flow</li>
+          <li><strong style="color:var(--text)">Brand templates</strong> for social posts</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <p>Each deliverable follows strategy, wireframe planning, premium layouts, and SEO-led structure.</p>
+      <div class="grid3">
+        <div class="card mini"><h3>Website Design & Development</h3><p>Website wireframe planning, UI layout, WordPress / Elementor build, mobile optimisation, and launch support.</p></div>
+        <div class="card mini"><h3>SEO Setup</h3><p>Keyword mapping, on-page optimisation, title and meta structure, indexing setup, and local SEO foundations.</p></div>
+        <div class="card mini"><h3>Digital Marketing</h3><p>Campaign planning, content systems, brand consistency, and growth-focused execution across platforms.</p></div>
+        <div class="card mini"><h3>Canva Design Studio</h3><p>Post templates, posters, flyers, banners, event creatives, and professional brand kits.</p></div>
+        <div class="card mini"><h3>AI Content Studio</h3><p>Captions, blogs, reel scripts, email copy, and website copy upgrades built for brand tone.</p></div>
+        <div class="card mini"><h3>WhatsApp Business Setup</h3><p>Profile setup, catalogue, auto replies, labels, quick replies, and website WhatsApp integration.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <p>Execution strength across strategy, structure, design, content systems, and client-ready delivery.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Website & SEO Skills</h3>
+          <ul class="list">
+            <li>Website wireframe planning and page architecture</li>
+            <li>WordPress + Elementor builds and section systems</li>
+            <li>On-page SEO structure: headings, titles, meta, internal linking</li>
+            <li>Local SEO foundations and Google visibility setup</li>
+            <li>Speed basics: image optimisation and clean layout discipline</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Marketing & Design Skills</h3>
+          <ul class="list">
+            <li>Digital marketing planning and campaign execution</li>
+            <li>Canva design systems: templates, posters, banners, flyers</li>
+            <li>Brand tone consistency across website and social media</li>
+            <li>AI-assisted content production with human polish</li>
+            <li>WhatsApp Business workflows for enquiry conversion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Selected website projects and digital execution.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Website Projects</h3>
+          <ul class="list">
+            <li><strong style="color:var(--text)">Environmental Experts</strong> — Website</li>
+            <li><strong style="color:var(--text)">Blissful Abode Goa</strong> — Website + complete digital marketing</li>
+            <li><strong style="color:var(--text)">Live In Computers</strong> — Website</li>
+            <li><strong style="color:var(--text)">SKL Shipping & Logistics Private Limited</strong> — Website</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Delivery Process</h3>
+          <ul class="list">
+            <li>Strategy and scope confirmation</li>
+            <li>Website wireframe and page flow planning</li>
+            <li>Design system and layout build</li>
+            <li>SEO structure setup across pages</li>
+            <li>Launch, handover, and support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="meenakshi">
+      <h2>Meenakshi Films Combine</h2>
+      <p>Film distribution legacy and a rare Bollywood publicity archive.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Archive Collection</h3>
+          <ul class="list">
+            <li>Vintage Bollywood poster collection</li>
+            <li>Film booklets</li>
+            <li>Lobby cards</li>
+            <li>Show cards</li>
+            <li>Hand-painted lobby cards</li>
+            <li>Hand-painted show cards</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Contact for Archive</h3>
+          <p style="margin:0;color:var(--muted);line-height:1.6">Collection access and archive enquiries.</p>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" href="https://wa.me/917045649547" target="_blank" rel="noreferrer">Enquire on WhatsApp</a>
+            <a class="btn" href="#contact">Contact Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Direct start line and fast execution.</p>
+      <div class="card">
+        <div class="contactCard">
+          <div class="contactItem">
+            <div class="label">Address</div>
+            <div class="value">Digital Garage, Linking Road, Santacruz (W), Mumbai – 400054, India</div>
+          </div>
+          <div class="contactItem">
+            <div class="label">Phone</div>
+            <div class="value">+91 70456 49547</div>
+          </div>
+          <div class="contactItem">
+            <div class="label">Email</div>
+            <div class="value">kamini.birdsongllp@gmail.com</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="https://wa.me/917045649547" target="_blank" rel="noreferrer">WhatsApp Now</a>
+          <a class="btn secondary" href="mailto:kamini.birdsongllp@gmail.com">Send Email</a>
+          <a class="btn" href="#top">Back to Top</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        © Digital Garage by Kamini GK · Websites · SEO · Digital Marketing · Canva Design · AI Content · WhatsApp Business Systems
+      </div>
+    </section>
+  </div>
+</body>
+</html>
