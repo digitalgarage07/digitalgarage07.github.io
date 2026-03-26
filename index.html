@@ -1,160 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Garage by Kamini GK | Website Design, SEO & Digital Marketing Mumbai</title>
+  <meta name="description" content="Digital Garage by Kamini GK builds premium websites, SEO-ready business presence and digital marketing systems for businesses, professionals, educators and companies in Mumbai and beyond." />
+  <meta name="keywords" content="website design Mumbai, SEO services Mumbai, digital marketing Mumbai, business website, digital presence, Digital Garage by Kamini GK" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Digital Garage by Kamini GK" />
+  <meta property="og:description" content="Premium website design, SEO and digital marketing for serious businesses." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://digitalgarage07.github.io/" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f1e9;
+      --surface: rgba(255,255,255,0.82);
+      --surface-strong: #ffffff;
+      --text: #101010;
+      --muted: #5d5d5d;
+      --line: rgba(16,16,16,0.08);
+      --soft-gold: #d8c0a2;
+      --gold: #9e7a4f;
+      --dark: #121212;
+      --shadow: 0 18px 50px rgba(0,0,0,0.08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1200px;
+    }
 
-<title>Digital Garage by Kamini GK | Website Design, SEO & Digital Marketing Mumbai</title>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(216,192,162,0.30), transparent 32%),
+        linear-gradient(180deg, #fbf9f6 0%, var(--bg) 100%);
+      line-height: 1.6;
+    }
 
-<style>
-body {margin:0; font-family:Arial, sans-serif; color:#111; background:#fff;}
-.container {width:90%; max-width:1200px; margin:auto;}
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-header {padding:20px 0; font-size:20px; font-weight:700;}
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
 
-.hero {
-padding:120px 0;
-text-align:center;
-background:#f5f5f5;
-}
-.hero h1 {
-font-size:48px;
-margin-bottom:20px;
-}
-.hero p {
-font-size:18px;
-color:#555;
-max-width:700px;
-margin:auto;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251,249,246,0.78);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(16,16,16,0.05);
+    }
 
-section {padding:80px 0;}
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-h2 {
-font-size:32px;
-margin-bottom:20px;
-}
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
 
-.grid {
-display:grid;
-gap:25px;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-}
+    .brand strong {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
 
-.card {
-border:1px solid #eee;
-padding:25px;
-border-radius:10px;
-}
+    .brand span {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
 
-.clients span {
-display:block;
-padding:15px;
-border:1px solid #eee;
-border-radius:8px;
-margin-bottom:10px;
-background:#fafafa;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
 
-.contact a {
-display:block;
-margin-bottom:12px;
-font-weight:600;
-}
+    .nav-links a:hover { color: var(--text); }
 
-.cta {
-background:#000;
-color:#fff;
-text-align:center;
-padding:80px 20px;
-}
-.cta a {
-color:#fff;
-margin:10px;
-display:inline-block;
-border:1px solid #fff;
-padding:12px 20px;
-text-decoration:none;
-}
-</style>
+    .btn, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn {
+      background: var(--dark);
+      color: #fff;
+      box-shadow: 0 14px 24px rgba(0,0,0,0.12);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+      color: var(--text);
+    }
+
+    .btn:hover, .btn-outline:hover { transform: translateY(-1px); }
+
+    .hero {
+      padding: 88px 0 52px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-copy {
+      padding: 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(216,192,162,0.35);
+      color: #6f5330;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      max-width: 11ch;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .hero-highlights div {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .hero-highlights strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .hero-highlights span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .portrait {
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 420px;
+      background: linear-gradient(160deg, #2d2d2d, #111111 70%, #70553a 140%);
+      position: relative;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-fallback {
+      min-height: 420px;
+      display: flex;
+      align-items: end;
+      justify-content: start;
+      padding: 24px;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.40)),
+        linear-gradient(160deg, #2d2d2d, #111111 70%, #70553a 140%);
+    }
+
+    .side-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .mini {
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .mini span {
+      display: block;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 44px 0;
+    }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .three-grid, .services-grid, .work-grid, .contact-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .three-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card, .work-card, .contact-card, .client-box, .panel {
+      padding: 28px;
+    }
+
+    .card h3, .work-card h3, .contact-card h3, .panel h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card p, .work-card p, .contact-card p, .panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(216,192,162,0.30);
+      color: #6f5330;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .services-grid ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      display: grid;
+      gap: 8px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .client-box {
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
+    }
+
+    .client-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .client-list span {
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.8);
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    .contact-card .label {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    .map {
+      margin-top: 22px;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.9);
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      display: block;
+    }
+
+    .cta {
+      padding: 24px 0 52px;
+    }
+
+    .cta-box {
+      border-radius: 32px;
+      background: linear-gradient(135deg, #111111, #2b2b2b 55%, #7b5b3a 140%);
+      color: #fff;
+      padding: 40px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.16);
+    }
+
+    .cta-box h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      max-width: 12ch;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      max-width: 58ch;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .cta .btn-outline {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    footer {
+      padding: 28px 0 56px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-row {
+      border-top: 1px solid rgba(16,16,16,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-wrap, .three-grid, .services-grid, .work-grid, .split, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 68px; }
+      .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box, .cta-box {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .hero-actions, .cta-actions { flex-direction: column; }
+      .btn, .btn-outline { width: 100%; }
+      .side-note { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(2.2rem, 11vw, 3.4rem); }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <strong>Digital Garage by Kamini GK</strong>
+        <span>Website Design • SEO • Digital Marketing</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Start Your Digital Presence</a>
+    </div>
+  </header>
 
-<header class="container">
-Digital Garage by Kamini GK
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">Premium Digital Marketing Agency Presence</span>
+          <h1>Website Design, SEO & Digital Marketing That Build Serious Business Presence</h1>
+          <p>Digital Garage by Kamini GK builds premium websites, stronger visibility and structured digital presence for businesses, professionals, educators, hospitality ventures and companies. Backed by 26 years of business-facing experience across hospitality, event management and executive support.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#services">View Services</a>
+            <a class="btn-outline" href="#work">See Work Delivered</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <strong>26+ Years Experience</strong>
+              <span>Business-facing execution across operations, communication and presentation.</span>
+            </div>
+            <div>
+              <strong>SEO-Ready Structure</strong>
+              <span>Clear service positioning and search-friendly website presentation.</span>
+            </div>
+            <div>
+              <strong>Premium Client Presence</strong>
+              <span>Built to help businesses look credible, polished and ready for growth.</span>
+            </div>
+          </div>
+        </div>
 
-<section class="hero">
-<div class="container">
-<h1>Website Design, SEO & Digital Marketing That Builds Serious Business Presence</h1>
-<p>26+ years of business experience across hospitality, executive operations and digital marketing. Delivering structured, premium digital presence.</p>
-</div>
-</section>
+        <div class="hero-side">
+          <div class="portrait">
+            <img src="kamini.jpg" alt="Kamini Kaushik - Digital Garage by Kamini GK" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback" style="display:none;">Digital Garage by Kamini GK</div>
+          </div>
+          <div class="side-note">
+            <div class="mini">
+              <strong>Business Base</strong>
+              <span>Executive Assistant by profession</span>
+            </div>
+            <div class="mini">
+              <strong>Business Venture</strong>
+              <span>Digital Marketing agency owner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="container">
-<h2>Services</h2>
-<div class="grid">
-<div class="card">Website Design & Development</div>
-<div class="card">Search Engine Optimisation (SEO)</div>
-<div class="card">Digital Marketing & Brand Positioning</div>
-</div>
-</section>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Digital solutions built for trust, visibility and growth</h2>
+          <p>Digital Garage combines business understanding with digital execution. That means cleaner websites, stronger positioning and more serious online presentation for every client.</p>
+        </div>
+        <div class="three-grid">
+          <article class="card">
+            <h3>Business-first thinking</h3>
+            <p>Not just design. Every page is structured to communicate clearly, build trust and support enquiries.</p>
+          </article>
+          <article class="card">
+            <h3>Premium presentation</h3>
+            <p>From layout to content hierarchy, the website is designed to make businesses look polished and credible.</p>
+          </article>
+          <article class="card">
+            <h3>Execution discipline</h3>
+            <p>Backed by years of operational experience, delivery stays structured, practical and detail-focused.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="container">
-<h2>Work Delivered</h2>
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Structured digital services for businesses that want stronger online presence and better market perception.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card">
+            <span class="tag">Website Design</span>
+            <h3>Premium websites that present businesses professionally</h3>
+            <p>Clean, high-trust business websites built to improve presentation, communication and enquiry flow.</p>
+            <ul>
+              <li>Homepage structure and service positioning</li>
+              <li>Mobile-friendly business website setup</li>
+              <li>Premium visual and content hierarchy</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">SEO</span>
+            <h3>Search-friendly website setup and visibility foundations</h3>
+            <p>SEO-ready headings, metadata and service language that support long-term discoverability.</p>
+            <ul>
+              <li>Website title and meta setup</li>
+              <li>Keyword-aligned page structure</li>
+              <li>Local business relevance for Mumbai</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Digital Marketing</span>
+            <h3>Business-led digital marketing support</h3>
+            <p>Digital presence setup across channels with practical business thinking and market-facing execution.</p>
+            <ul>
+              <li>WhatsApp marketing support</li>
+              <li>Facebook and Instagram business presence</li>
+              <li>Marketing planning and communication direction</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="tag">Brand Presence</span>
+            <h3>Sharper online image for serious businesses</h3>
+            <p>Positioning, presentation and structure that help businesses look more established and credible.</p>
+            <ul>
+              <li>Clear service presentation</li>
+              <li>Premium tone and copy structure</li>
+              <li>Business-facing credibility layer</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="grid">
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2>Work Delivered</h2>
+          <p>Real work matters more than generic claims. This section shows execution, not just services.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <span class="tag">Hospitality</span>
+            <h3>Blissful Abode – Goa</h3>
+            <p>Website work, Airbnb page edits, WhatsApp marketing, Facebook page setup, Instagram presence and structured marketing plans for stronger hospitality-led digital presence.</p>
+          </article>
+          <article class="work-card">
+            <span class="tag">Business Execution</span>
+            <h3>Digital presence across platforms</h3>
+            <p>Website setup, SEO-ready structure, social media business presence, marketing support and stronger brand presentation for multiple clients and industries.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Blissful Abode – Goa</h3>
-<p>Website setup, Airbnb page optimisation, WhatsApp marketing, Facebook and Instagram setup, and structured marketing plan execution.</p>
-</div>
+    <section id="clients">
+      <div class="container split">
+        <div class="client-box">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Selected Clients</h2>
+            <p>Digital Garage supports businesses across education, hospitality, professional services, logistics and creative sectors.</p>
+          </div>
+          <div class="client-list">
+            <span>Live In Computers</span>
+            <span>Meenakshi Film Combine</span>
+               <span>Blissful Abode – Goa</span>
+             <span>Phadke Tutorials</span>
+            <span>The Camel Film Museum</span>
+            <span>Environmental Experts</span>
+            <span>SKL Shipping & Logistics Private Limited</span>
+               
+                
+          </div>
+        </div>
+        <div class="panel">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Why Digital Garage feels different</h2>
+          </div>
+          <p>Digital Garage is built on more than marketing tools. It is backed by executive-level business support, hospitality exposure, event management experience and years of operational discipline. That translates into stronger communication, better detailing and more serious execution for every digital project.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Digital Presence Execution</h3>
-<p>Website creation, SEO structure, social media setup, and business-focused digital marketing for multiple clients.</p>
-</div>
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Build a stronger digital presence for your business</h2>
+          <p>For website design, SEO services, WhatsApp-led visibility and digital marketing support in Mumbai, connect directly with Digital Garage by Kamini GK.</p>
+          <div class="cta-actions">
+            <a class="btn" href="mailto:digitalgarage07@gmail.com">Email Digital Garage</a>
+            <a class="btn-outline" href="tel:+917045649547">Call +91 70456 49547</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Every contact pathway is direct and clickable.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <span class="label">Email</span>
+            <h3><a href="mailto:digitalgarage07@gmail.com">digitalgarage07@gmail.com</a></h3>
+            <p>Direct business enquiries for website, SEO and digital marketing requirements.</p>
+          </article>
+          <article class="contact-card">
+            <span class="label">Phone</span>
+            <h3><a href="tel:+917045649547">+91 70456 49547</a></h3>
+            <p>Tap to call directly from mobile.</p>
+          </article>
+          <article class="contact-card">
+            <span class="label">Address</span>
+            <h3><a href="https://www.google.com/maps/search/?api=1&query=Digital+Garage,+Linking+Road,+Santacruz+(W),+Mumbai+400054,+India" target="_blank" rel="noopener">Digital Garage, Linking Road, Santacruz (W), Mumbai – 400054, India</a></h3>
+            <p>Tap to open the location in Google Maps.</p>
+          </article>
+        </div>
+        <div class="map">
+          <iframe title="Digital Garage Map" src="https://www.google.com/maps?q=Digital+Garage,+Linking+Road,+Santacruz+(W),+Mumbai+400054,+India&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="container">
-<h2>Selected Clients</h2>
-<div class="clients">
-<span>Live In Computers</span>
-<span>Meenakshi Film Combine</span>
-<span>Blissful Abode – Goa</span>
-<span>Phadke Tutorials</span>
-<span>The Camel Film Museum</span>
-<span>Environmental Experts</span>
-<span>SKL Shipping & Logistics Private Limited</span>
-<span> Vkonnect Solutions</span>
-</div>
-</section>
-
-<section class="container contact">
-<h2>Contact</h2>
-
-<a href="https://maps.google.com/?q=Digital+Garage+Linking+Road+Santacruz+West+Mumbai" target="_blank">
-📍 Digital Garage, Linking Road, Santacruz (W), Mumbai – 400054
-</a>
-
-<a href="tel:+917045649547">
-📞 +91 70456 49547
-</a>
-
-<a href="mailto:digitalgarage07@gmail.com">
-✉️ digitalgarage07@gmail.com
-</a>
-
-</section>
-
-<section class="cta">
-<h2>Start Building Your Digital Presence</h2>
-<a href="mailto:digitalgarage07@gmail.com">Email Now</a>
-<a href="tel:+917045649547">Call Now</a>
-</section>
-
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Digital Garage by Kamini GK. All rights reserved.</div>
+      <div>Website Design • SEO • Digital Marketing • Mumbai</div>
+    </div>
+  </footer>
 </body>
 </html>
