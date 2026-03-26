@@ -11,21 +11,22 @@
   <meta property="og:description" content="Premium website design, SEO and digital marketing for serious businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://digitalgarage07.github.io/" />
-  <meta name="theme-color" content="#111111" />
+  <meta name="theme-color" content="#101010" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f1e9;
-      --surface: rgba(255,255,255,0.82);
+      --bg: #f7f3ec;
+      --bg-soft: #fcfaf7;
+      --surface: rgba(255,255,255,0.84);
       --surface-strong: #ffffff;
       --text: #101010;
-      --muted: #5d5d5d;
+      --muted: #5f5a55;
       --line: rgba(16,16,16,0.08);
-      --soft-gold: #d8c0a2;
-      --gold: #9e7a4f;
-      --dark: #121212;
+      --gold-soft: #e6d8c7;
+      --gold: #9a7652;
+      --dark: #111111;
       --shadow: 0 18px 50px rgba(0,0,0,0.08);
       --radius-xl: 30px;
       --radius-lg: 22px;
@@ -40,8 +41,8 @@
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(216,192,162,0.30), transparent 32%),
-        linear-gradient(180deg, #fbf9f6 0%, var(--bg) 100%);
+        radial-gradient(circle at top left, rgba(230,216,199,0.55), transparent 34%),
+        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
       line-height: 1.6;
     }
 
@@ -57,7 +58,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(251,249,246,0.78);
+      background: rgba(252,250,247,0.8);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(16,16,16,0.05);
     }
@@ -111,29 +112,29 @@
     .btn {
       background: var(--dark);
       color: #fff;
-      box-shadow: 0 14px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 14px 26px rgba(0,0,0,0.14);
     }
 
     .btn-outline {
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.75);
       color: var(--text);
     }
 
     .btn:hover, .btn-outline:hover { transform: translateY(-1px); }
 
     .hero {
-      padding: 88px 0 52px;
+      padding: 84px 0 44px;
     }
 
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 28px;
       align-items: stretch;
     }
 
-    .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box {
+    .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box, .trust-box {
       background: var(--surface);
       border: 1px solid rgba(255,255,255,0.9);
       box-shadow: var(--shadow);
@@ -149,11 +150,11 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(216,192,162,0.35);
-      color: #6f5330;
+      background: rgba(230,216,199,0.72);
+      color: #6e5234;
       padding: 8px 14px;
       border-radius: 999px;
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       font-weight: 700;
       letter-spacing: 0.03em;
     }
@@ -168,9 +169,9 @@
 
     .hero-copy p {
       margin: 0;
-      font-size: 1.05rem;
+      font-size: 1.04rem;
       color: var(--muted);
-      max-width: 58ch;
+      max-width: 60ch;
     }
 
     .hero-actions {
@@ -188,7 +189,7 @@
     }
 
     .hero-highlights div {
-      background: rgba(255,255,255,0.78);
+      background: rgba(255,255,255,0.8);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
       padding: 16px;
@@ -207,17 +208,26 @@
     }
 
     .hero-side {
-      padding: 22px;
+      padding: 24px;
       display: grid;
       gap: 18px;
+      align-content: start;
+    }
+
+    .portrait-wrap {
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
     }
 
     .portrait {
-      border-radius: 24px;
+      width: min(100%, 300px);
+      aspect-ratio: 4 / 5;
+      border-radius: 28px;
       overflow: hidden;
-      min-height: 420px;
       background: linear-gradient(160deg, #2d2d2d, #111111 70%, #70553a 140%);
       position: relative;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.12);
     }
 
     .portrait img {
@@ -227,12 +237,14 @@
     }
 
     .portrait-fallback {
-      min-height: 420px;
+      width: min(100%, 300px);
+      aspect-ratio: 4 / 5;
       display: flex;
       align-items: end;
       justify-content: start;
       padding: 24px;
       color: #fff;
+      border-radius: 28px;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.40)),
         linear-gradient(160deg, #2d2d2d, #111111 70%, #70553a 140%);
@@ -245,7 +257,7 @@
     }
 
     .mini {
-      background: rgba(255,255,255,0.84);
+      background: rgba(255,255,255,0.85);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 16px;
@@ -253,7 +265,7 @@
 
     .mini strong {
       display: block;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--muted);
       margin-bottom: 6px;
       text-transform: uppercase;
@@ -263,16 +275,12 @@
     .mini span {
       display: block;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
 
-    section {
-      padding: 44px 0;
-    }
+    section { padding: 44px 0; }
 
-    .section-head {
-      margin-bottom: 24px;
-    }
+    .section-head { margin-bottom: 24px; }
 
     .section-head h2 {
       margin: 0 0 10px;
@@ -284,7 +292,7 @@
     .section-head p {
       margin: 0;
       color: var(--muted);
-      max-width: 66ch;
+      max-width: 68ch;
     }
 
     .three-grid, .services-grid, .work-grid, .contact-grid {
@@ -295,19 +303,19 @@
     .three-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-    .card, .work-card, .contact-card, .client-box, .panel {
+    .card, .work-card, .contact-card, .client-box, .panel, .trust-box {
       padding: 28px;
     }
 
-    .card h3, .work-card h3, .contact-card h3, .panel h3 {
+    .card h3, .work-card h3, .contact-card h3, .panel h3, .trust-box h3 {
       margin: 0 0 10px;
       font-size: 1.18rem;
       letter-spacing: -0.02em;
     }
 
-    .card p, .work-card p, .contact-card p, .panel p {
+    .card p, .work-card p, .contact-card p, .panel p, .trust-box p {
       margin: 0;
       color: var(--muted);
     }
@@ -317,8 +325,8 @@
       margin-bottom: 14px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(216,192,162,0.30);
-      color: #6f5330;
+      background: rgba(230,216,199,0.72);
+      color: #6e5234;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -340,7 +348,7 @@
     }
 
     .client-box {
-      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
+      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.74));
     }
 
     .client-list {
@@ -354,7 +362,7 @@
       padding: 12px 16px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.86);
       font-weight: 600;
       font-size: 0.92rem;
     }
@@ -370,6 +378,10 @@
     }
 
     .contact-card a:hover { text-decoration: underline; }
+
+    .contact-card p + p {
+      margin-top: 10px;
+    }
 
     .map {
       margin-top: 22px;
@@ -403,12 +415,12 @@
       font-size: clamp(2rem, 3.5vw, 3.2rem);
       line-height: 1.06;
       letter-spacing: -0.04em;
-      max-width: 12ch;
+      max-width: 13ch;
     }
 
     .cta-box p {
       margin: 0;
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.8);
       max-width: 58ch;
     }
 
@@ -455,7 +467,7 @@
 
     @media (max-width: 640px) {
       .hero { padding-top: 68px; }
-      .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box, .cta-box {
+      .hero-copy, .hero-side, .panel, .card, .work-card, .contact-card, .client-box, .trust-box, .cta-box {
         padding: 22px;
         border-radius: 22px;
       }
@@ -492,12 +504,10 @@
           <h1>Website Design, SEO & Digital Marketing That Build Serious Business Presence</h1>
           <p>Digital Garage by Kamini GK builds premium websites, stronger visibility and structured digital presence for businesses, professionals, educators, hospitality ventures and companies. Backed by 26 years of business-facing experience across hospitality, event management and executive support.</p>
           <div class="hero-actions">
-  <a class="btn" href="#services">View Services</a>
-  <a class="btn-outline" href="#work">See Work Delivered</a>
-  <a class="btn-outline" href="https://wa.me/917045649547" target="_blank">
-    WhatsApp Now
-  </a>
-</div>
+            <a class="btn" href="#services">View Services</a>
+            <a class="btn-outline" href="#work">See Work Delivered</a>
+            <a class="btn-outline" href="https://wa.me/917045649547" target="_blank" rel="noopener">WhatsApp Now</a>
+          </div>
           <div class="hero-highlights">
             <div>
               <strong>26+ Years Experience</strong>
@@ -515,8 +525,10 @@
         </div>
 
         <div class="hero-side">
-          <div class="portrait">
-            <img src="kamini.jpg" alt="Kamini Kaushik - Digital Garage by Kamini GK" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="portrait-wrap">
+            <div class="portrait">
+              <img src="kamini.jpg" alt="Kamini Kaushik - Digital Garage by Kamini GK" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='flex';this.parentElement.style.display='none';">
+            </div>
             <div class="portrait-fallback" style="display:none;">Digital Garage by Kamini GK</div>
           </div>
           <div class="side-note">
@@ -618,11 +630,7 @@
             <span class="tag">Hospitality</span>
             <h3>Blissful Abode – Goa</h3>
             <p>Website work, Airbnb page edits, WhatsApp marketing, Facebook page setup, Instagram presence and structured marketing plans for stronger hospitality-led digital presence.</p>
-            <p style="margin-top:16px;">
-  <a class="btn-outline" href="https://sites.google.com/view/blissfulabode/" target="_blank">
-    View Live Website
-  </a>
-</p>
+            <p style="margin-top:16px;"><a class="btn-outline" href="https://sites.google.com/view/blissfulabode/" target="_blank" rel="noopener">View Live Website</a></p>
           </article>
           <article class="work-card">
             <span class="tag">Business Execution</span>
@@ -643,13 +651,11 @@
           <div class="client-list">
             <span>Live In Computers</span>
             <span>Meenakshi Film Combine</span>
-               <span>Blissful Abode – Goa</span>
-             <span>Phadke Tutorials</span>
+            <span>Blissful Abode – Goa</span>
+            <span>Phadke Tutorials</span>
             <span>The Camel Film Museum</span>
             <span>Environmental Experts</span>
             <span>SKL Shipping & Logistics Private Limited</span>
-               
-                
           </div>
         </div>
         <div class="panel">
@@ -669,7 +675,7 @@
           <div class="cta-actions">
             <a class="btn" href="mailto:digitalgarage07@gmail.com">Email Digital Garage</a>
             <a class="btn-outline" href="tel:+917045649547">Call +91 70456 49547</a>
-            <a class="btn-outline" href="https://wa.me/917045649547" target="_blank">WhatsApp Message</a>
+            <a class="btn-outline" href="https://wa.me/917045649547" target="_blank" rel="noopener">WhatsApp Message</a>
           </div>
         </div>
       </div>
@@ -691,7 +697,11 @@
             <span class="label">Phone</span>
             <h3><a href="tel:+917045649547">+91 70456 49547</a></h3>
             <p>Tap to call directly from mobile.</p>
-            <p><a href="https://wa.me/917045649547" target="_blank">Start WhatsApp Chat</a></p>
+          </article>
+          <article class="contact-card">
+            <span class="label">WhatsApp</span>
+            <h3><a href="https://wa.me/917045649547" target="_blank" rel="noopener">Chat on WhatsApp</a></h3>
+            <p>Open direct WhatsApp message for faster enquiries.</p>
           </article>
           <article class="contact-card">
             <span class="label">Address</span>
